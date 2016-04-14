@@ -22,15 +22,15 @@ public class HelloWorldController {
     }
 
     @RequestMapping("/hello2")
-    public String helloWorld(Model model){
+    public String helloWorld(Model model) {
         model.addAttribute("message", "Hello World!");
         return "hello";
     }
 
 
     @RequestMapping("/person")
-    public String toPerson(String name,double age){
-        System.out.println(name+" "+age);
+    public String toPerson(String name, double age) {
+        System.out.println(name + " " + age);
         return "hello";
     }
 }
