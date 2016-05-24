@@ -19,16 +19,20 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.1.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-test:4.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.4" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.2" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.29" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.2" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.11" />
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.9" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.6" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.6.6" />
+          <element id="library" level="project" name="Maven: org.glassfish.web:javax.servlet.jsp.jstl:1.2.2" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp.jstl:jstl-api:1.2" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:jsp-api:2.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
