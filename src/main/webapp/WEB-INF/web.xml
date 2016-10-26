@@ -5,19 +5,34 @@
 <web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
-    http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    http://java.sun.com/xml/ns/j2ee/web-app_3_0.xsd">
     <display-name>Archetype Created Web Application</display-name>
-    <!--configure the setting of springmvcDispatcherServlet and configure the mapping-->
+
+    <!-- 监听spring上下文容器 -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!-- 加载spring的xml配置文件到 spring的上下文容器中 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:springmvc-study-servlet.xml</param-value>
+    </context-param>
+
+    <!-- 配置Spring MVC DispatcherServlet -->
     <servlet>
         <servlet-name>springmvc</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!-- 初始化参数 -->
         <init-param>
+            <!-- 加载SpringMVC的xml到 spring的上下文容器中 -->
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:springmvc-study-servlet.xml</param-value>
         </init-param>
-        <!-- <load-on-startup>1</load-on-startup> -->
+         <!--<load-on-startup>1</load-on-startup>-->
     </servlet>
 
+    <!-- 配置DispatcherServlet所需要拦截的 url -->
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>
         <url-pattern>/</url-pattern>
@@ -42,4 +57,8 @@
     <session-config>
         <session-timeout>60</session-timeout>
     </session-config>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
 </web-app>
