@@ -16,7 +16,7 @@
     <!-- 加载spring的xml配置文件到 spring的上下文容器中 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:springmvc-study-servlet.xml</param-value>
+        <param-value>classpath:application-context.xml</param-value>
     </context-param>
 
     <!-- 配置Spring MVC DispatcherServlet -->
@@ -59,6 +59,6 @@
     </session-config>
 
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 </web-app>
