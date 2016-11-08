@@ -14,6 +14,16 @@
     <!-- don't handle the static resource -->
     <mvc:default-servlet-handler/>
 
+    <!-- HandlerMapping -->
+    <!--BeanNameUrlHandlerMapping：
+    表示将请求的URL和Bean名字映射，如URL为 “上下文/hello”，则Spring配置文件必须有一个名字为“/hello”的Bean，上下文默认忽略。-->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+    <!-- HandlerAdapter -->
+    <!--SimpleControllerHandlerAdapter：
+    表示所有实现了org.springframework.web.servlet.mvc.Controller接口的Bean可以作为Spring Web MVC中的处理器。如果需要其他类型的处理器可以通过实现HadlerAdapter来解决。-->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
     <!--&lt;!&ndash; if you use annotation you must configure following setting &ndash;&gt;-->
     <!--<mvc:annotation-driven/>-->
 
