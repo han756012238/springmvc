@@ -27,6 +27,23 @@
     <!--&lt;!&ndash; if you use annotation you must configure following setting &ndash;&gt;-->
     <!--<mvc:annotation-driven/>-->
 
+    <bean name="/hello_abstract" class="com.qiezi.springmvc.controller.HelloAbstractController"/>
+    <!--如果想直接在控制器写出响应，只需要通过response写出，并返回null即可-->
+    <bean name="/helloWithoutReturnModelAndView" class="com.qiezi.springmvc.controller.HelloWorldWithoutReturnModelAndViewController"/>
+    <!--只支持post请求-->
+    <bean name="/helloWithPOST" class="com.qiezi.springmvc.controller.HelloAbstractController">
+        <property name="supportedMethods" value="POST"></property>
+    </bean>
+    <!--当前请求的session前置条件检查，如果当前请求无session将抛出HttpSessionRequiredException异常-->
+    <bean name="/helloRequireSession" class="com.qiezi.springmvc.controller.HelloAbstractController">
+        <property name="requireSession" value="true"/>
+    </bean>
+    <!--客户端端缓存控制：缓存5秒，cacheSeconds=5-->
+    <bean name="/helloCache" class="com.qiezi.springmvc.controller.HelloWorldCacheController">
+        <property name="cacheSeconds" value="5"/>
+    </bean>
+    <bean name="/helloLastModified" class="com.qiezi.springmvc.controller.HelloWorldLastModifiedCacheController"/>
+
     <!-- configure the InternalResourceViewResolver -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           id="internalResourceViewResolver">
