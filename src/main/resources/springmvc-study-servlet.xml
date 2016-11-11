@@ -13,6 +13,7 @@
 
     <!-- don't handle the static resource -->
     <mvc:default-servlet-handler/>
+    <mvc:annotation-driven></mvc:annotation-driven>
 
     <!-- HandlerMapping -->
     <!--BeanNameUrlHandlerMapping：
