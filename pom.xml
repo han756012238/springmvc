@@ -16,6 +16,7 @@
         <!-- log4j日志文件管理包版本 -->
         <slf4j.version>1.6.6</slf4j.version>
         <log4j.version>1.2.9</log4j.version>
+        <org.projectlombok.version>1.16.8</org.projectlombok.version>
     </properties>
 
     <dependencies>
@@ -168,6 +169,14 @@
             <artifactId>fastjson</artifactId>
             <version>1.1.39</version>
         </dependency>
+
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${org.projectlombok.version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>springmvc-study</finalName>
