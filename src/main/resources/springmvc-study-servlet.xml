@@ -68,4 +68,12 @@
             </bean>
         </mvc:message-converters>
     </mvc:annotation-driven>
+
+    <mvc:interceptors>
+        <!--<bean class="com.qiezi.springmvc.interceptor.FirstIterceptor"/>-->
+        <mvc:interceptor>
+            <mvc:mapping path="/employee/**"/>
+            <bean class="com.qiezi.springmvc.interceptor.FirstIterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
